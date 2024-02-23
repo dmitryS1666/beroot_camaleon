@@ -26,7 +26,7 @@ set :ssh_options, {
 
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 set :rbenv_type, :user
-set :rbenv_ruby, '2.7.6'
+set :rbenv_ruby, '3.1.2'
 
 # set :ssh_options, {verify_host_key: :never}
 # set :ssh_options, { user_known_hosts_file: '/dev/null', forward_agent: false }
