@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.18.0"
+lock "~> 3.17.3"
 
 set :application, "beroot_app"
-set :repo_url, "https://github.com/dmitryS1666/beroot_app.git"
+set :repo_url, "https://github.com/dmitryS1666/beroot_camaleon.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/root/#{fetch :application}"
