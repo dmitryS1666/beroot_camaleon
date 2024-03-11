@@ -1,0 +1,29 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ * require camaleon_cms/bootstrap.min
+ *= require font-awesome
+ *= require ./bootstrap/bootstrap-grid
+ *= require ./bootstrap/bootstrap-reboot
+ *= require ./style
+ *= require ./animate
+ *= require ./aos
+ *= require ./bootstrap-datepicker
+ *= require ./bootstrap.min
+ *= require ./flaticon
+ *= require ./icomoon
+ *= require ./ionicons.min
+ *= require ./jquery.timepicker
+ *= require ./style
+ *= require ./magnific-popup
+ *= require ./open-iconic-bootstrap.min
+ *= require ./owl.carousel.min
+ *= require ./owl.theme.default.min
+ */

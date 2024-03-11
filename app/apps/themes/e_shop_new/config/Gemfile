@@ -1,0 +1,1 @@
+gem 'camaleon_ecommerce', github: 'owen2345/camaleon-ecommerce'

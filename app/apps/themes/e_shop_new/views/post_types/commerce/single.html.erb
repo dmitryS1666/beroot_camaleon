@@ -1,0 +1,30 @@
+<article id="post">
+  <div class="container entry-header">
+    <div class="row">
+      <% if @post.has_thumb? %>
+        <div class="entry-thumbnail" style="text-align: center; width: 100%; margin-top: 50px;">
+          <%= raw @post.the_thumb %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <h1 class="entry-title"><%= @post.title %></h1>
+    </div>
+    <div class="row">
+      <p class="entry-title"><%= @post.content.html_safe %></p>
+    </div>
+    <div class="row">
+      <span>Кол-во: </span>
+    </div>
+    <div class="row">
+      <span>Цена: </span>
+      <span class="entry-title"><b><%= @post.price %></b></span>
+    </div>
+    <div class="row">
+      <button class="btn btn-info">Добавить в корзину</button>
+    </div>
+  </div><!-- .entry-header -->
+  <div class="entry-content">
+    <%#= raw @post.the_content %>
+  </div><!-- .entry-content -->
+</article><!-- #post -->

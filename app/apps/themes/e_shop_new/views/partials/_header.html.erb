@@ -1,0 +1,106 @@
+<% all_category = CamaleonCms::Category.where.not(slug: 'uncategorized') %>
+
+<div class="py-1 bg-primary">
+  <div class="container">
+    <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+      <div class="col-lg-12 d-block">
+        <div class="row d-flex">
+          <div class="col-md pr-4 d-flex topper align-items-center">
+            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span>
+            </div>
+            <span class="text">+ 1235 2355 98</span>
+          </div>
+          <div class="col-md pr-4 d-flex topper align-items-center">
+            <div class="icon mr-2 d-flex justify-content-center align-items-center">
+              <span class="icon-paper-plane"></span></div>
+            <span class="text">beroot@email.com</span>
+          </div>
+          <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+            <span class="text">3-5 рабочих дней доставка &amp; Бесплатынй возврат</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="<%= current_site.the_url %>">Beroot</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a href="<%= current_site.the_url %>" class="nav-link">Главная</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown04">
+
+            <% if all_category.present? %>
+              <% all_category.each do |category| %>
+                <a class="dropdown-item" href="/category/<%= category.id %>-<%= category.slug %>"><%= category.name %></a>
+              <% end %>
+            <% end %>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about" class="nav-link">О нас</a></li>
+        <li class="nav-item cta cta-colored">
+          <a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<!-- header -->
+<!--  <div class="navbar navbar-primary">-->
+<!--    <div class="navbar-header">-->
+<!--      <a id="logo" class="navbar-brand" href="<%#= current_site.the_url %>"><%#= image_tag current_site.the_logo, class: "img-responsive" %></a>-->
+<!--      <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">-->
+<!--        <span class="icon-bar"></span>-->
+<!--        <span class="icon-bar"></span>-->
+<!--        <span class="icon-bar"></span>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    <div id="navbar-main" class="navbar-collapse collapse">-->
+<%#= raw get_nav_menu('main_menu', 'nav navbar-nav ') %>
+
+<!--      <ul class="nav navbar-nav navbar-right">-->
+<%# if signin? %>
+<!--          <li class="dropdown">-->
+<!--            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="<%#= cama_current_user.decorate.the_avatar %>" style="max-width: 24px; border-radius: 50%" alt=""/> <%#= cama_current_user.username %>-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu">-->
+<!--              <li><a href="<%#= cama_admin_dashboard_path %>"><%#= I18n.t('camaleon_cms.common.dashboard') %></a></li>-->
+<!--              <li><a href="<%#= cama_admin_profile_path %>"><%#= I18n.t('camaleon_cms.common.profile') %></a></li>-->
+<!--              <li><a href="<%#= cama_admin_logout_path %>"><%#= I18n.t('camaleon_cms.common.logout') %></a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<%# else %>
+<!--          <li class="dropdown">-->
+<!--            <a id="login-user" class="dropdown-toggle" data-toggle="dropdown" href="#"><%#= I18n.t('camaleon_cms.common.login') %>-->
+<!--              / <%#= I18n.t('camaleon_cms.common.register') %></a>-->
+<!--            <ul class="dropdown-menu">-->
+<!--              <li><a href="<%#= cama_admin_login_path %>"><%#= I18n.t('camaleon_cms.common.login') %></a></li>-->
+<!--              <li><a href="<%#= cama_admin_register_path %>"><%#= I18n.t('camaleon_cms.common.register') %></a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<%# end %>
+<!--      </ul>-->
+<%#= raw current_site.draw_languages("language list-inline pull-right", true) %>
+<!--    </div>-->
+<!--  </div>-->
+
+<!-- ./header -->

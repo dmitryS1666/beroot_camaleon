@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.0.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8", ">= 7.0.8.1"
@@ -42,6 +42,8 @@ gem 'active_storage-postgresql'
 
 # CMS
 gem "camaleon_cms"
+gem 'camaleon_ecommerce', github:  'owen2345/camaleon-ecommerce'
+gem 'draper'
 
 group :development do
   gem "web-console"

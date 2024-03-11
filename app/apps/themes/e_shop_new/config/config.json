@@ -1,0 +1,14 @@
+{
+  "name" : "E Shop",
+  "description" : "",
+  "thumb" : "images/image.png",
+  "helpers": [
+    "Themes::EShopNew::MainHelper"
+  ],
+  "hooks": {
+    "on_active": ["e_shop_new_on_install_theme"],
+    "on_inactive": ["e_shop_new_on_uninstall_theme"],
+    "on_theme_settings": ["e_shop_new_settings"]
+    //here all your hooks
+  }
+}

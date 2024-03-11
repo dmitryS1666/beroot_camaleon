@@ -1,0 +1,14 @@
+<div class="container">
+  <h3><%= @category.name %></h3>
+  <div class="row">
+    <% @posts.each_with_index do |product, index| %>
+      <%= render partial: 'partials/post_list_item', locals: { product: product.decorate } %>
+    <% end %>
+    <%= content_tag("div", raw(ct('no_contents_found', default: 'No contents found')), class: "alert alert-warning") if @posts.empty? %>
+  </div>
+  <div class="row">
+    <div class="container">
+      <%= raw cama_do_pagination(@posts) %>
+    </div>
+  </div>
+</div>
